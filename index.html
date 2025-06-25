@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missão Espacial: Sua Aventura</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="space-bg"></div>
+    <div class="stars"></div>
+    
+    <div class="main-container">
+        <!-- Introdução -->
+        <div id="intro" class="fade-in">
+            <div class="panel">
+                <h1 class="title">Missão Espacial</h1>
+                <p class="subtitle">
+                    Uma aventura interativa através do cosmos.<br>
+                    Suas decisões moldam o destino da missão.
+                </p>
+                <button id="start-btn" class="btn btn-primary">
+                    Iniciar Missão
+                </button>
+            </div>
+        </div>
+
+        <!-- Progresso -->
+        <div id="progress-container" class="progress-container hidden">
+            <div class="progress-text">PROGRESSO DA MISSÃO</div>
+            <div class="progress-bar">
+                <div id="progress-fill" class="progress-fill" style="width: 0%"></div>
+            </div>
+        </div>
+
+        <!-- Questões -->
+        <div id="questions-container" class="hidden">
+            <div id="question1" class="panel hidden fade-in">
+                <div class="system-font">SITUAÇÃO 01/05</div>
+                <h2 class="question-title">Sinal de Socorro</h2>
+                <p class="question-text">
+                    Seus sensores detectaram um sinal de socorro em frequência universal. 
+                    A origem é uma nave não identificada, possivelmente alienígena. 
+                    Protocolos de segurança recomendam cautela com contatos desconhecidos.
+                </p>
+                <button data-choice="1" class="btn">
+                    Investigar o sinal
+                    <div class="choice-description">Aproximar-se para avaliar a situação</div>
+                </button>
+                <button data-choice="2" class="btn">
+                    Manter curso atual
+                    <div class="choice-description">Priorizar cronograma da missão</div>
+                </button>
+            </div>
+
+            <div id="question2" class="panel hidden fade-in">
+                <div class="system-font">SITUAÇÃO 02/05</div>
+                <h2 class="question-title">Campo de Asteroides</h2>
+                <p class="question-text">
+                    Uma densa nuvem de detritos rochosos bloqueia sua rota. 
+                    Análises indicam fragmentos de alta velocidade em padrão errático. 
+                    Sistemas de navegação sugerem duas opções viáveis.
+                </p>
+                <button data-choice="1" class="btn">
+                    Ativar escudos defensivos
+                    <div class="choice-description">Proteção máxima, alto consumo energético</div>
+                </button>
+                <button data-choice="2" class="btn">
+                    Navegação evasiva
+                    <div class="choice-description">Manobras arriscadas, economia de energia</div>
+                </button>
+            </div>
+
+            <div id="question3" class="panel hidden fade-in">
+                <div class="system-font">SITUAÇÃO 03/05</div>
+                <h2 class="question-title">Falha Crítica</h2>
+                <p class="question-text">
+                    Sistema de suporte à vida apresentou falha no módulo de reciclagem atmosférica. 
+                    Reservas de oxigênio limitadas. Reparos demandam parada completa da nave 
+                    e possível atraso no cronograma da missão.
+                </p>
+                <button data-choice="1" class="btn">
+                    Executar reparos imediatos
+                    <div class="choice-description">Segurança da tripulação prioritária</div>
+                </button>
+                <button data-choice="2" class="btn">
+                    Acelerar para o destino
+                    <div class="choice-description">Apostar nas reservas de emergência</div>
+                </button>
+            </div>
+
+            <div id="question4" class="panel hidden fade-in">
+                <div class="system-font">SITUAÇÃO 04/05</div>
+                <h2 class="question-title">Contato Alienígena</h2>
+                <p class="question-text">
+                    Você descobriu uma inteligência artificial de origem desconhecida. 
+                    A entidade oferece conhecimento tecnológico avançado em troca de 
+                    informações sobre a localização e capacidades da Terra.
+                </p>
+                <button data-choice="1" class="btn">
+                    Aceitar a negociação
+                    <div class="choice-description">Adquirir tecnologia avançada</div>
+                </button>
+                <button data-choice="2" class="btn">
+                    Recusar e partir
+                    <div class="choice-description">Proteger informações terrestres</div>
+                </button>
+            </div>
+
+            <div id="question5" class="panel hidden fade-in">
+                <div class="system-font">SITUAÇÃO 05/05</div>
+                <h2 class="question-title">Combustível Crítico</h2>
+                <p class="question-text">
+                    Aproximando-se do objetivo final, reservas de combustível atingiram nível crítico. 
+                    Completar a missão consumirá toda a energia restante, 
+                    impossibilitando o retorno imediato à Terra.
+                </p>
+                <button data-choice="1" class="btn">
+                    Completar a missão
+                    <div class="choice-description">Priorizar objetivos científicos</div>
+                </button>
+                <button data-choice="2" class="btn">
+                    Retornar à Terra
+                    <div class="choice-description">Preservar recursos para retorno</div>
+                </button>
+            </div>
+        </div>
+
+        <!-- Resultado -->
+        <div id="result-container" class="hidden fade-in">
+            <div class="panel">
+                <h2 class="question-title">Relatório da Missão</h2>
+                <div id="result-content" class="story-text"></div>
+                <button id="restart-btn" class="btn btn-primary" style="margin-top: 32px;">
+                    Nova Missão
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
